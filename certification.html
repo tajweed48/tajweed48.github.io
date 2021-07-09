@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+</head>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+
+<script type="text/javascript" src="html2canvas.js"></script>
+<style>
+
+table.blueTable {
+direction: rtl;
+  border: 1px solid #1C6EA4;
+  background-color: #D0E4F5;
+  width: 50%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 2px solid #444444;
+  padding: 0px 0px;
+}
+table.blueTable tbody td {
+  font-size: 19px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #FFFFFF ;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 23px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot {
+  font-size: 23px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 3px solid #444444;
+}
+table.blueTable tfoot td {
+  font-size: 23px;
+  text-align: center;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+@font-face {
+  font-family: STV;
+  src: url(stv-bold.ttf);
+}
+
+
+
+    p {
+        font-family: STV, Charcoal, sans-serif;
+        font-size: 25px;
+        color: #0070FF;
+        font-weight: 700;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        direction: rtl;
+    }
+    
+    .example_b {
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #60a3bc;
+        padding: 10px;
+        border-radius: 50px;
+        display: inline-block;
+        border: none;
+        transition: all 0.4s ease 0s;
+    }
+    
+    .example_b:hover {
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.4s ease 0s;
+    }
+    
+    body {
+        max-width: 1000px;
+        position: relative;
+    }
+    /* mydivheader teacher */
+    
+    #mydiv {
+        direction: rtl;
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #d3d3d3;
+        color: #873a35;
+        top: 63%;
+        right: 0%;
+    }
+    
+    #mydivheader {
+        cursor: move;
+    }
+    /* mydivheader1 subject -->*/
+    
+    #mydiv1 {
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #d3d3d3;
+        color: #873a35;
+        top: 45%;
+        right: 0%;
+        direction: rtl;
+
+    }
+    
+    #mydivheader1 {
+        cursor: move;
+    }
+    /* mydivheader2 location -->*/
+    
+    #mydiv2 {
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        direction: rtl;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #d3d3d3;
+        color: #873a35;
+        top: 52%;
+        right: 0%;
+    }
+    
+    #mydivheader2 {
+        cursor: move;
+        size="18" color: #000000;
+    }
+    /* mydivheader3 start -->*/
+    
+    #mydiv3 {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 140%;
+        text-align: center;
+        direction: rtl;
+        border: 0px solid #d3d3d3;
+        font-family: "STV", Times, serif;
+        color: #873a35;
+        top: 60%;
+        right: 0%;
+    }
+    
+    #mydivheader3 {
+        cursor: move;
+        size="18" color: #000000;
+    }
+    /* mydivheader4 student -->*/
+    
+    #mydiv4 {
+        direction: rtl;
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #b34103;
+        color: #873a35;
+        top: 35%;
+        right: 0%;
+    }
+    
+    #mydivheader4 {
+        cursor: move;
+        size="18" color: rgba(00, 50, 69, 0.1);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .imgbox {
+        display: grid;
+        height: 100%;
+    }
+    
+    .center-fit {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: auto;
+    }
+	
+	textarea { 
+	        font-size: 100%;
+
+	resize: none; 
+	}
+</style>
+
+<body>
+    <div align="right">
+        <table  cellspacing="0">
+		<tbody class="toSave" id="toSave">
+            <tr>
+                <td>
+                    <div id="mydiv">
+                        <div contentEditable="true" id="mydivheader"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mydiv1">
+                        <div contentEditable="true" id="mydivheader1"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mydiv2">
+                        <div contentEditable="true" id="mydivheader2"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mydiv3">
+                        <div contentEditable="true" id="mydivheader3"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mydiv4">
+                        <div contentEditable="true" id="mydivheader4"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr cellspacing="0">
+                <td>
+                    <div class="imgbox">
+                        <img id="cert_image" style="z-index: -100;" class="center-fit" align="right" src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/certs/course_certification_male.jpg" allowTaint="true">
+                    </div>
+                </td>
+
+            </tr>
+					</tbody>
+
+        </table>
+    </div>
+<br>
+	<table data-html2canvas-ignore="true" class="blueTable" cellspacing="70">
+        <thead class="spaceUnder">
+			<th>أدخل اسماء الطلاب بدون أوراد</th>
+			<th>أدخل اسماء الطالبات بدون أوراد</th>
+	    </thead>
+        <tr class="spaceUnder">
+			<td>
+				<textarea id="students_list_male" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطلاب بدون أوراد"></textarea>
+			</td>
+			<td>
+				<textarea id="students_list_female" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطالبات بدون أوراد"></textarea>
+			</td>
+	    </tr>
+        <thead class="spaceUnder">
+			<th>أدخل اسماء الطلاب المحافظين على الاوراد</th>
+			<th>أدخل اسماء الطالبات المحافظات على الاوراد</th>
+	    </thead>
+        <tr class="spaceUnder">
+			<td>
+				<textarea id="students_list_male_extra" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطلاب المحافظين على الاوراد"></textarea>
+			</td>
+			<td>
+				<textarea id="students_list_female_extra" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطالبات المحافظات على الاوراد"></textarea>
+			</td>
+	    </tr>
+      </table>
+	
+	
+    <script LANGUAGE="JavaScript">
+        function saveAs(uri, filename) {
+
+            var link = document.createElement('a');
+
+            if (typeof link.download === 'string') {
+
+                link.href = uri;
+                link.download = filename;
+
+                //Firefox requires the link to be in the body
+                document.body.appendChild(link);
+
+                //simulate click
+                link.click();
+
+                //remove the link when done
+                document.body.removeChild(link);
+
+            } else {
+
+                window.open(uri);
+
+            }
+        }
+        var students_counter = 0;
+        var students_list_counter = 0;
+        var students_array = [];
+        var cert_list = [];
+
+        function create_image() {
+		var HTML_Width = $(".toSave").width();
+        var HTML_Height = $(".toSave").height();
+        var top_left_margin = 0;
+        var PDF_Width = HTML_Width+(top_left_margin*2);
+        var PDF_Height = (PDF_Width*1.415)+(top_left_margin*2);
+        var canvas_image_width = HTML_Width;
+        var canvas_image_height = HTML_Height;
+        var totalPDFPages = 0;//Math.ceil(HTML_Height/PDF_Height)-1;  multiple pages issue
+		
+		
+		
+
+            var arrayLength = students_array.length;
+            var element = document.getElementById("toSave");
+            var cert_canvas = document.getElementById("cert_canvas");
+            if (cert_canvas != null) {
+                cert_canvas.parentNode.removeChild(cert_canvas);
+            }
+            var create_button = document.getElementById("create_button");
+            window.scrollTo(-1, 0);
+            html2canvas(element, {
+                scale: 6,
+                useCORS: true
+            }).then(function(canvas) {
+                canvas.setAttribute("id", "cert_canvas");
+                var file_name = students_array[students_list_counter][students_counter];
+                file_name.replace(/ /g, "_");
+                //saveAs(canvas.toDataURL(), file_name.replace(/ /g, "_") + '.png');
+				          var imgData = canvas.toDataURL("image/jpeg", 1.0);
+          var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+          pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+          for (var i = 1; i <= totalPDFPages; i++) { 
+                    pdf.addPage(PDF_Width, PDF_Height);
+                    pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+          }
+          pdf.save(file_name + ".pdf");
+
+                if (students_counter < (students_array[students_list_counter].length - 1)) {
+                    students_counter++;
+                } else if (students_list_counter < (students_array.length - 1)) {
+                    students_list_counter++;
+                    students_counter = 0;
+                    document.getElementById("cert_image").src = "https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/certs/" + cert_list[students_list_counter];
+                } else {
+				    alert("تم إنشاء جميع الشهادات");
+				}
+
+                document.querySelector('#mydivheader4').innerHTML = students_array[students_list_counter][students_counter];
+
+                /*
+	var elementzoomOut = document.getElementById("zoomOut");
+    elementzoomOut.parentNode.removeChild(elementzoomOut);
+    var elementzoomIn = document.getElementById("zoomIn");
+    elementzoomIn.parentNode.removeChild(elementzoomIn);
+var para = document.createElement("p");
+var new_line = document.createElement("br");
+var node = document.createTextNode('لحفظ الصّورة، عليك الوقوف بالمؤشر فوق الصّورة، ثم اضغط على الزر الأيمن للفأرة، ثم اختر "حفظ الصورة بإسم" اختر الأسم والمكان لحفظ الملف.');
+para.appendChild(node);
+
+element.appendChild(new_line);
+element.appendChild(para);
+*/
+                //create_button.textContent = "تعديل";
+                //create_button.setAttribute( "onClick", "javascript: location.reload();" );
+
+                function myFunction() {
+                    alert("myFunction called");
+                    location.reload();
+                }
+
+            });
+        }
+
+        function getParams() {
+            var idx = document.URL.indexOf('?');
+            var params = new Array();
+            if (idx != -1) {
+                var pairs = document.URL.substring(idx + 1, document.URL.length).split('&');
+                for (var i = 0; i < pairs.length; i++) {
+                    nameVal = pairs[i].split('=');
+                    var tmpp = decodeURIComponent(nameVal[1]);
+                    params[nameVal[0]] = tmpp.replace(/\+/g, " ");
+                }
+            }
+            return params;
+        }
+        let map = new Map();
+
+        map.set("shiekh_khaled_sakr", 'الشيخ خالد صقر'); // a string key
+        map.set("shiekh_abd_alrahem", 'الشيخ عبد الرحيم خليل'); // a string key
+        map.set("shiekh_mashhor_fawaz", 'الشيخ مشهور فوّاز'); // a string key
+        map.set("shiekh_mahmod_abo_shfea", 'الشيخ محمود ابو شفيع'); // a string key
+        map.set("shiekh_muhammad_ayesh", 'الشيخ محمد عايش'); // a string key
+        map.set("shiekh_ameer_naffar", 'الشيخ امير نفار'); // a string key
+        map.set("shiekh_ehab_khalil", 'الشيخ ايهاب الشيخ خليل'); // a string key
+        map.set("shiekh_ehab_khiralla", 'الشيخ ايهاب خير الله'); // a string key
+        map.set("shiekh_muhammad_haidare", 'الشيخ محمد حيادري'); // a string key
+        map.set("shiekh_raafat_kanaana"		, 'الشيخ رأفت كناعنة');   // a string key
+        map.set("shiekh_badeaa_melhem"		, 'الشيخ بديع ملحم');   // a string key
+        map.set("shiekh_mahmod_khatib", 'الشيخ محمود خطيب'); // a string key
+        map.set("shiekh_hilal", 'الشيخ هلال حسينية'); // a string key
+        map.set("shiekh_muhamad_aref", 'الشيخ محمد العارف وتد'); // a string key
+        map.set("shiekh_mahmod_watad", 'الشيخ محمود وتد'); // a string key
+        map.set("shiekh_khaled_zoabi", 'الشيخ خالد زعبي'); // a string key
+        map.set("hamed", 'الأستاذ حامد اغبارية'); // a string key
+        map.set("shiekh_tawfek", 'الأستاذ توفيق محمد'); // a string key
+        map.set("shiekh_ahmad_hammad", 'الشيخ احمد حماد'); // a string key
+        map.set("hussen_muhammady"			, 'الشيخ حسين محمدي');   // a string key
+        map.set("abd_alrahman_abu_hija"			, 'الشيخ عبد الرحمن ابو الهيجاء');   // a string key
+        map.set("okht_nihal_okare", 'الأخت نهال عكري'); // a string key
+        map.set("okht_sawsan_masarwe"					, 'الأخت سوسن مصاروة');   // a string key
+        map.set("okht_eiman_abed", 'الأخت ايمان عبيد'); // a string key
+        map.set("okht_asmaa_kryeem", 'الأخت اسماء كريم'); // a string key
+        map.set("okht_tasnem_taha", 'الأخت تسنيم طه'); // a string key
+        map.set("okht_layla_mawase", 'الأخت ليلى مواسي'); // a string key
+
+        map.set("tfser", 'تفسير'); // a string key
+        map.set("sera", 'السيرة النبوية'); // a string key
+        map.set("abadat", 'عبادات (1)'); // a string key
+        map.set("abadat2", 'عبادات (2)'); // a string key
+        map.set("tajwed", 'تجويد (1)'); // a string key
+        map.set("tajwed2", 'تجويد (2)'); // a string key
+        map.set("trbyat_awlad", 'تربية الأولاد في الإسلام'); // a string key
+        map.set("olom_hadeth", 'علوم قرآن وعلوم حديث'); // a string key
+        map.set("osol20", 'الأصول العشرين'); // a string key
+        map.set("thkafa_islamya", 'ثقافة إسلامية'); // a string key
+        map.set("arabic_lang", 'لغة عربية'); // a string key
+        map.set("tzkya", 'تزكية'); // a string key
+        map.set("rjal_alfekr", 'رجال الفكر والدعوة'); // a string key
+        map.set("gzw_fkre", 'الغزو الفكري'); // a string key
+        map.set("mjtmaa_arabe", 'المجتمع العربي'); // a string key
+        map.set("osol_feqh", 'أصول فقه'); // a string key
+        map.set("wsael_daawa", 'وسائل دعوة'); // a string key
+        map.set("aqeda1", 'عقيدة'); // a string key
+        map.set("asaleb_daawa", 'أساليب دعوة'); // a string key
+        map.set("thula_mn_awlen", 'ثلّة من الأولين'); // a string key
+
+        map.set("kofr_kna", 'كفركنا - قاعة مسجد عثمان بن عفان'); // a string key
+        map.set("qlnsawa", 'قلنسوة - المدرسة الاهلية'); // a string key
+        map.set("arraba", 'عرابة - مركز النور'); // a string key
+        map.set("fredes", 'الفرديس - قاعة مسجد الفردوس - الظهرات'); // a string key
+        map.set("tamra", 'طمرة - مسجد معاذ بن جبل'); // a string key
+        map.set("kofr_kara", 'كفرقرع - قاعة مسجد ابو بكر'); // a string key
+        map.set("um_alfahm", 'مسجد ابن تيميه ام الفحم'); // a string key
+
+        params = getParams();
+        document.querySelector('#mydivheader').innerHTML = map.get(decodeURIComponent(params["teacher"])); // '<img   src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["teacher"]) + '" allowTaint="true" >';
+        document.querySelector('#mydivheader1').innerHTML = map.get(decodeURIComponent(params["subject"])); // '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["subject"]) + '" allowTaint="true" >';
+        document.querySelector('#mydivheader2').innerHTML = map.get(decodeURIComponent(params["location"])); //  '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["location"]) + '" allowTaint="true" >';
+        document.querySelector('#mydivheader3').innerHTML = (params["start"]);
+
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("mydiv"));
+        dragElement(document.getElementById("mydiv1"));
+        dragElement(document.getElementById("mydiv2"));
+        dragElement(document.getElementById("mydiv3"));
+        dragElement(document.getElementById("mydiv4"));
+        var global_current_elmnt;
+
+        function dragElement(elmnt) {
+            var pos1 = 0,
+                pos2 = 0,
+                pos3 = 0,
+                pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                global_current_elmnt = e;
+
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+</body>
+<div align="center">
+    <br>
+    <button class="example_b" align="left" onclick="init_arrays()" data-html2canvas-ignore="true" style="font-size : 20px;" id="create_button">أنشئ الشهادة</button>
+    <button class="example_b" data-html2canvas-ignore="true" style="font-size : 20px;" id="zoomOut">-</button>
+    <button class="example_b" data-html2canvas-ignore="true" style="font-size : 20px;" id="zoomIn">+</button>
+    <button class="example_b" data-html2canvas-ignore="true" style="font-size : 20px;" id="return_back">عودة للصفحة الرئيسية</button>
+    <script>
+        let zoom_map = new Map();
+
+        var zoom = 1;
+        var zoomStep = 0.05;
+
+        document.getElementById("zoomIn").addEventListener("click", function() {
+            if (!(zoom_map.has(global_current_elmnt.srcElement.id))) {
+                zoom_map.set(global_current_elmnt.srcElement.id, 1); // a string key
+            }
+            zoom_map.set(global_current_elmnt.srcElement.id, zoom_map.get(global_current_elmnt.srcElement.id) + zoomStep);
+            //      zoom += zoomStep;
+            global_current_elmnt.srcElement.style.transform = "scale(" + zoom_map.get(global_current_elmnt.srcElement.id) + ")";
+        });
+        document.getElementById("zoomOut").addEventListener("click", function() {
+            if (!(zoom_map.has(global_current_elmnt.srcElement.id))) {
+                zoom_map.set(global_current_elmnt.srcElement.id, 1); // a string key
+            }
+            if (zoom_map.get(global_current_elmnt.srcElement.id) > zoomStep) {
+                zoom_map.set(global_current_elmnt.srcElement.id, zoom_map.get(global_current_elmnt.srcElement.id) - zoomStep);
+                global_current_elmnt.srcElement.style.transform = "scale(" + zoom_map.get(global_current_elmnt.srcElement.id) + ")";
+            }
+        });
+		function isEmptyOrSpaces(str){
+			return str === null || str.match(/^\s*$/) !== null;
+		}
+		
+		function isNotEmptyOrSpaces(str){
+			return !isEmptyOrSpaces(str);
+		}
+		
+//"course_certification_male.jpg", "course_certification_female.jpg", "course_certification_extra_male.jpg", "course_certification_extra_female.jpg"
+        function init_arrays() {
+            students_counter = 0;
+            var students = document.getElementById("students_list_male").value;
+            document.getElementById("students_list_male").innerHTML = students;
+			if (isEmptyOrSpaces(students)) {
+				students_list_counter++;
+			} else {
+				cert_list[students_counter] = "course_certification_male.jpg";
+				tmp_array = students.split("\n");
+				students_array[students_counter] = tmp_array.filter(isNotEmptyOrSpaces);
+				students_counter++;
+			}
+			
+
+            students = document.getElementById("students_list_female").value;
+			if (isEmptyOrSpaces(students)) {
+				students_list_counter++;
+			} else {
+				cert_list[students_counter] = "course_certification_female.jpg";
+				tmp_array = students.split("\n");
+				students_array[students_counter] = tmp_array.filter(isNotEmptyOrSpaces);
+				students_counter++;
+			}
+
+            students = document.getElementById("students_list_male_extra").value;
+			if (isEmptyOrSpaces(students)) {
+				students_list_counter++;
+			} else {
+				cert_list[students_counter] = "course_certification_extra_male.jpg";
+				tmp_array = students.split("\n");
+				students_array[students_counter] = tmp_array.filter(isNotEmptyOrSpaces);
+				students_counter++;
+			}
+
+            students = document.getElementById("students_list_female_extra").value;
+			if (isEmptyOrSpaces(students)) {
+				students_list_counter++;
+			} else {
+				cert_list[students_counter] = "course_certification_extra_female.jpg";
+				tmp_array = students.split("\n");
+				students_array[students_counter] = tmp_array.filter(isNotEmptyOrSpaces);
+				students_counter++;
+			}
+
+			if (students_list_counter >= 4) {
+			    students_list_counter = 0;
+			    students_counter = 0;
+				alert("الرجاء تعبئة اسماء الطلاب اولا");
+			} else {
+			    students_list_counter = 0;
+			    students_counter = 0;
+				document.querySelector('#mydivheader4').innerHTML = students_array[0][0];
+                document.getElementById("cert_image").src = "https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/certs/" + cert_list[0];
+				document.getElementById("create_button").onclick = create_image;
+			}
+        }
+        document.getElementById("return_back").addEventListener("click", function() {
+            location.href = "cert_index.html";
+        });
+    </script>
+</div>
+
+</html>

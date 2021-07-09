@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF8">
+  </head>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+  <script type="text/javascript" src="html2canvas.js"></script>
+  <style>
+  p {
+font-family: STV, Charcoal, sans-serif;
+font-size: 25px;
+color: #0070FF;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+direction: rtl;
+
+}
+
+  .example_b {
+color: #fff !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #60a3bc;
+padding: 10px;
+border-radius: 50px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+
+.example_b:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+	  
+@font-face {
+  font-family: STV;
+  src: url(stv-bold.ttf);
+}
+	  
+    body {
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+    }
+    
+    
+    
+    @font-face {
+  font-family: STV;
+  src: url(stv-bold.ttf);
+}
+
+		   /* mydivheader teacher */
+    #mydiv {
+       letter-spacing: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 150%;
+font-family: "STV", Times, serif;
+      text-align: center;
+      border: 0px solid #d3d3d3;
+      color: #012934;
+      top: 35%;
+      right:0%;
+
+
+    }
+
+    #mydivheader {
+      cursor: move;
+    }
+	
+		   /* mydivheader1 subject -->*/
+    #mydiv1 {
+             letter-spacing: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 150%;
+font-family: "STV", Times, serif;
+      text-align: center;
+      border: 0px solid #d3d3d3;
+      color: #740000;
+      top: 28%;
+      right:0%;
+direction: rtl;
+
+    }
+    #mydivheader1 {
+      cursor: move;
+    }
+		   /* mydivheader2 location -->*/
+    #mydiv2 {
+      letter-spacing: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 120%;
+
+font-family: "STV", Times, serif;
+      text-align: center;
+      border: 0px solid #d3d3d3;
+      color: #740000;
+      top: 78%;
+      right:0%;
+    }
+    #mydivheader2 {
+
+      cursor: move;
+      z-index: 10;
+      margin: 0%;
+      size="18"
+      color: #000000;
+    }
+	
+		   /* mydivheader3 start -->*/
+    #mydiv3 {
+      position: absolute;
+
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 120%;
+
+      text-align: center;
+      border: 0px solid #d3d3d3;
+	  font-family: "STV", Times, serif;
+
+      color: #740000;
+      top: 43%;
+      right:0%;
+    }
+    #mydivheader3 {
+
+      cursor: move;
+      z-index: 10;
+      margin: 0%;
+      size="18"
+      color: #000000;
+    }
+
+		   /* mydivheader4 day -->*/
+
+    #mydiv4 {
+      letter-spacing: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 130%;
+
+font-family: "STV", Times, serif;
+      text-align: center;
+      border: 0px solid #d3d3d3;
+      color: #740000;
+      top: 67%;
+      right:0%;
+    }
+    #mydivheader4 {
+
+      cursor: move;
+      margin: 0%;
+      size="18"
+      color: rgba(00, 50, 69, 0.1);
+    }
+
+		   /* mydivheader5 time -->*/
+
+    #mydiv5 {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 120%;
+
+      text-align: center;
+      border: 0px solid #d3d3d3;
+	  font-family: "STV", Times, serif;
+
+      color: #740000;
+      top: 73%;
+      right:0%;
+    }
+    #mydivheader5 {
+
+      cursor: move;
+      margin: 0%;
+      size="22"
+      color: #000000;
+    }
+
+		  /* mydivheader6 contact1 -->*/
+@font-face {
+  font-family: Monadi;
+  src: url(Monadi.ttf);
+}
+    #mydiv6 {
+	 letter-spacing: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 130%;
+font-family: "STV", Times, serif;
+      text-align: center;
+      border: 0px solid #d3d3d3;
+      color: #740000;
+      top: 84%;
+      right:0%;
+    }
+    #mydivheader6 {
+
+      cursor: move;
+      margin: 0%;
+      size="18"
+      color: #000000;
+    }
+		  /* mydivheader7 contact2 */
+	    #mydiv7 {
+	 letter-spacing: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.0);
+      font-size: 130%;
+font-family: "STV", Times, serif;
+      text-align: center;
+      border: 0px solid #d3d3d3;
+      color: #740000;
+      top: 90%;
+      right:0%;
+    }
+    #mydivheader7 {
+
+      cursor: move;
+      margin: 0%;
+      size="18"
+      color: #000000;
+    }
+	
+	
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .imgbox {
+      display: grid;
+      height: 100%;
+    }
+    .center-fit {
+      max-width: 100%;
+      max-height: 100vh;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div  align="right">
+      <table align="center" id="toSave" cellspacing="0" class="toSave">
+        <tr>
+          <td>
+            <div id="mydiv">
+              <div contentEditable="true" id="mydivheader"></div>
+            </div>
+          </td> 
+        </tr>
+        <tr>          
+          <td>
+            <div id="mydiv1">
+              <div contentEditable="true" id="mydivheader1"></div>
+            </div>
+          </td>
+        </tr>
+        <tr> 
+          <td>
+            <div id="mydiv2">
+              <div contentEditable="true" id="mydivheader2"></div>
+            </div>
+          </td>
+        </tr>
+        <tr> 
+          <td>
+            <div id="mydiv3">
+              <div contentEditable="true" id="mydivheader3"></div>
+            </div>
+          </td>
+        </tr>
+        <tr> 
+          <td>
+            <div id="mydiv4">
+              <div contentEditable="true" id="mydivheader4"></div>
+            </div>
+          </td>   
+        </tr>
+        <tr>           
+          <td>
+            <div id="mydiv5">
+              <div contentEditable="true" id="mydivheader5"></div>
+            </div>
+          </td>
+        </tr>
+        <tr> 
+          <td>
+            <div id="mydiv6">
+              <div contentEditable="true" id="mydivheader6"></div>
+            </div>
+          </td>
+		  <td>
+            <div id="mydiv7">
+              <div contentEditable="true" id="mydivheader7"></div>
+            </div>
+          </td>
+        </tr>
+        <tr cellspacing="0">
+<td id="user_buttons" data-html2canvas-ignore="true">
+<div data-html2canvas-ignore="true" align="center">
+  <div id="ad_gender_type">
+  <p>تمرير الدورة</p>
+  <input onclick="handleZoomClick(this);" type="radio" name="zoom" value="./" checked> وجاهي<br>
+  <input onclick="handleZoomClick(this);" type="radio" name="zoom" value="zoom/"> عبر الزووم<br>
+  <p>اختر نوع الاعلان</p>
+  <input id="gender_both" onclick="handleClick(this);" type="radio" name="gender" value="scale_new_poster_empty.png" checked> اخوة واخوات<br>
+  <input id="gender_female" onclick="handleClick(this);" type="radio" name="gender" value="scale_course_ad_empty_female.png"> اخوات فقط<br>
+</div>
+<br>    
+
+<button class="example_b" align="left" onclick="create_image()" data-html2canvas-ignore="true" style="font-size : 20px;" id="create_button">انشئ الاعلان</button>
+<br><br>
+
+	<button class="example_b" data-html2canvas-ignore="true" style="font-size : 20px;" id="zoomOut">-</button>
+    <button class="example_b" data-html2canvas-ignore="true" style="font-size : 20px;" id="zoomIn">+</button>
+<br><br>
+    <button class="example_b" data-html2canvas-ignore="true" style="font-size : 20px;" id="new_ad">تعديل الإعلان</button>
+<br>
+
+
+</div>
+</td>
+          <td>
+            <div class="imgbox">
+              <img id ="ad_image" style="z-index: -100;" class="center-fit" align="right" src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/scale_new_poster_empty.png" allowTaint="true" >
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+
+    <script LANGUAGE="JavaScript">
+//https://www.freakyjolly.com/jspdf-multipage-example-generate-multipage-pdf-using-single-canvas-of-html-document-using-jspdf/
+//https://stackoverflow.com/questions/17293135/download-a-div-in-a-html-page-as-pdf-using-javascript
+
+function saveAs(uri, filename) {
+
+    var link = document.createElement('a');
+
+    if (typeof link.download === 'string') {
+
+        link.href = uri;
+        link.download = filename;
+
+        //Firefox requires the link to be in the body
+        document.body.appendChild(link);
+
+        //simulate click
+        link.click();
+
+        //remove the link when done
+        document.body.removeChild(link);
+
+    } else {
+
+        window.open(uri);
+
+    }
+}
+
+
+
+
+      function create_image() {
+        var element = document.getElementById("toSave");
+        var create_button = document.getElementById("create_button");
+    //create_button.parentNode.removeChild(create_button);
+    create_button.style.display = "none";
+        var new_ad = document.getElementById("new_ad");
+    //new_ad.parentNode.removeChild(new_ad);
+    new_ad.style.display = "none";
+
+		  var ad_gender_type_element = document.getElementById("ad_gender_type");
+		  while (ad_gender_type_element.hasChildNodes()) {
+            ad_gender_type_element.removeChild(ad_gender_type_element.childNodes[0]);
+          }  
+
+	var elementzoomOut = document.getElementById("zoomOut");
+    elementzoomOut.parentNode.removeChild(elementzoomOut);
+    var elementzoomIn = document.getElementById("zoomIn");
+    elementzoomIn.parentNode.removeChild(elementzoomIn);
+
+        var HTML_Width = $(".toSave").width();
+        var HTML_Height = $(".toSave").height();
+        var top_left_margin = 0;
+        var PDF_Width = HTML_Width+(top_left_margin*2);
+        var PDF_Height = (PDF_Width*1.415)+(top_left_margin*2);
+        var canvas_image_width = HTML_Width;
+        var canvas_image_height = HTML_Height;
+        var totalPDFPages = 0;//Math.ceil(HTML_Height/PDF_Height)-1; multiple pages issue
+	      
+        var element = document.getElementById("toSave");
+        var create_button = document.getElementById("create_button");
+        window.scrollTo(-1,0);
+        html2canvas(element,{ scale:4, useCORS:true}).then(function(canvas){
+          canvas.setAttribute("id", "gggg");
+          var imgData = canvas.toDataURL("image/png", 1.0);
+          var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+          pdf.addImage(imgData, 'PNG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+          for (var i = 1; i <= totalPDFPages; i++) { 
+                    pdf.addPage(PDF_Width, PDF_Height);
+                    pdf.addImage(imgData, 'PNG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+          }
+          var filename = map.get(decodeURIComponent(params["subject"])) + map.get(decodeURIComponent(params["teacher"]));
+          pdf.save(filename + ".pdf");
+         // document.body.appendChild(canvas);
+		  //saveAs(imgData, 'file-name.jpeg');
+        });
+
+
+
+
+        html2canvas(element,{ scale:2, useCORS:true}).then(function(canvas){
+          canvas.setAttribute("id", "gggg");
+          var imgData = canvas.toDataURL("image/png", 1.0);
+          var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
+          pdf.addImage(imgData, 'PNG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
+          for (var i = 1; i <= totalPDFPages; i++) { 
+                    pdf.addPage(PDF_Width, PDF_Height);
+                    pdf.addImage(imgData, 'PNG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+          }
+          var filename = map.get(decodeURIComponent(params["subject"])) + map.get(decodeURIComponent(params["teacher"]));
+         // pdf.save(filename + ".pdf");
+          document.body.appendChild(canvas);
+		  saveAs(imgData, filename + '.png');
+
+          while (element.hasChildNodes()) {
+            element.removeChild(element.childNodes[0]);
+          }
+
+var para = document.createElement("p");
+var new_line = document.createElement("br");
+var node = document.createTextNode('لحفظ الصّورة، عليك الوقوف بالمؤشر فوق الصّورة، ثم اضغط على الزر الأيمن للفأرة، ثم اختر "حفظ الصورة بإسم" اختر الأسم والمكان لحفظ الملف.');
+para.appendChild(node);
+
+element.appendChild(new_line);
+element.appendChild(para);
+
+    create_button.style.display = "inline";
+    new_ad.style.display = "inline";
+element.appendChild(create_button);
+element.appendChild(new_ad);
+
+          create_button.textContent = "تعديل";
+          create_button.setAttribute( "onClick", "javascript: location.reload();" );
+          new_ad.textContent = "إنشاء إعلان جديد";
+
+          function myFunction(){
+            alert("myFunction called");
+            location.reload();
+          }
+
+        });
+      }
+
+
+      function getParams(){
+        var idx = document.URL.indexOf('?');
+        var params = new Array();
+        if (idx != -1) {
+          var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+          for (var i=0; i<pairs.length; i++){
+            nameVal = pairs[i].split('=');
+            var tmpp = decodeURIComponent(nameVal[1]);
+            params[nameVal[0]] = tmpp.replace(/\+/g, " ");
+          }
+        }
+        return params;
+      }
+	  let map = new Map();
+
+map.set("shiekh_khaled_sakr"				, 'الشيخ خالد صقر');   // a string key
+map.set("shiekh_abd_alrahem", 'الشيخ عبد الرحيم خليل'); // a string key
+map.set("shiekh_mashhor_fawaz", 'الشيخ مشهور فوّاز'); // a string key
+map.set("shiekh_mahmod_abo_shfea"		, 'الشيخ محمود ابو شفيع');   // a string key
+map.set("shiekh_muhammad_ayesh"		, 'الشيخ محمد عايش');   // a string key
+map.set("shiekh_ameer_naffar"				, 'الشيخ امير نفار');   // a string key
+map.set("shiekh_ehab_khalil"					, 'الشيخ ايهاب الشيخ خليل');   // a string key
+map.set("shiekh_ehab_khiralla"				, 'الشيخ ايهاب خير الله');   // a string key
+map.set("shiekh_muhammad_haidare"		, 'الشيخ محمد حيادري');   // a string key
+map.set("shiekh_raafat_kanaana"		, 'الشيخ رأفت كناعنة');   // a string key
+map.set("shiekh_badeaa_melhem"		, 'الشيخ بديع ملحم');   // a string key
+map.set("shiekh_mahmod_khatib"			, 'الشيخ محمود خطيب');   // a string key
+map.set("shiekh_hilal"							, 'الشيخ هلال حسينية');   // a string key
+map.set("shiekh_muhamad_aref"			, 'الشيخ محمد وتد');   // a string key
+map.set("shiekh_mahmod_watad"			, 'الشيخ محمود وتد');   // a string key
+map.set("shiekh_khaled_zoabi"				, 'الشيخ خالد زعبي');   // a string key
+map.set("shiekh_abdallah_idres"				, 'الشيخ عبد الله إدريس');   // a string key
+map.set("hamed"									, 'الأستاذ حامد اغبارية');   // a string key
+map.set("shiekh_tawfek"						, 'الأستاذ توفيق محمد');   // a string key
+map.set("shiekh_ahmad_hammad"			, 'الشيخ احمد حماد');   // a string key
+map.set("hussen_muhammady"			, 'الشيخ حسين محمدي');   // a string key
+map.set("abd_alrahman_abu_hija"			, 'الشيخ عبد الرحمن ابو الهيجاء');   // a string key
+map.set("okht_nihal_okare"					, 'الأخت نهال عكري');   // a string key
+map.set("okht_sawsan_masarwe"					, 'الأخت سوسن مصاروة');   // a string key
+map.set("okht_eiman_abed"					, 'الأخت ايمان عبيد');   // a string key
+map.set("okht_asmaa_kryeem"				, 'الأخت اسماء كريم');   // a string key
+map.set("okht_tasnem_taha"				, 'الأخت تسنيم طه');   // a string key
+map.set("okht_layla_mawase", 'الأخت ليلى مواسي'); // a string key
+
+map.set("tfser", 'تفسير'); // a string key
+map.set("sera", 'السيرة النبوية'); // a string key
+map.set("abadat", 'عبادات (1)'); // a string key
+map.set("abadat2", 'عبادات (2)'); // a string key
+map.set("tajwed", 'تجويد (1)'); // a string key
+map.set("tajwed2", 'تجويد (2)'); // a string key
+map.set("trbyat_awlad", 'تربية الأولاد في الإسلام'); // a string key
+map.set("olom_hadeth", 'علوم قرآن وعلوم حديث'); // a string key
+map.set("osol20", 'الأصول العشرين'); // a string key
+map.set("thkafa_islamya", 'ثقافة إسلامية'); // a string key
+map.set("arabic_lang", 'لغة عربية'); // a string key
+map.set("tzkya", 'تزكية'); // a string key
+map.set("rjal_alfekr", 'رجال الفكر والدعوة'); // a string key
+map.set("gzw_fkre", 'الغزو الفكري'); // a string key
+map.set("mjtmaa_arabe", 'المجتمع العربي'); // a string key
+map.set("osol_feqh", 'أصول فقه'); // a string key
+map.set("wsael_daawa", 'وسائل دعوة'); // a string key
+map.set("aqeda1", 'عقيدة'); // a string key
+map.set("asaleb_daawa", 'أساليب دعوة'); // a string key
+map.set("thula_mn_awlen", 'ثلّة من الأولين'); // a string key
+
+map.set("kofr_kna"	, 'كفركنا - قاعة مسجد عثمان بن عفان');   // a string key
+map.set("qlnsawa"	, 'قلنسوة - المدرسة الاهلية');   // a string key
+map.set("arraba"		, 'عرابة - مركز النور');   // a string key
+map.set("fredes"		, 'الفرديس - قاعة مسجد الفردوس - الظهرات');   // a string key
+map.set("tamra"		, 'طمرة - مسجد معاذ بن جبل');   // a string key
+map.set("kofr_kara"	, 'كفرقرع - قاعة مسجد ابو بكر');   // a string key
+map.set("um_alfahm"	, 'مسجد ابن تيميه ام الفحم');   // a string key
+map.set("nahaf"	, 'نحف - مسجد الرحمن');   // a string key
+map.set("online"	, '');   // a string key
+
+map.set('sun', 'أحد');   // a string key
+map.set('mon', 'إثنين');   // a string key
+map.set('tues', 'ثلاثاء');   // a string key
+map.set('wed', 'أربعاء');   // a string key
+map.set('thu', 'خميس');   // a string key
+map.set('friday', 'جمعة');   // a string key
+map.set('sat', 'سبت');   // a string key
+
+
+      params = getParams();
+      document.querySelector('#mydivheader').innerHTML   =  map.get(decodeURIComponent(params["teacher"])); // '<img   src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["teacher"]) + '" allowTaint="true" >';
+      document.querySelector('#mydivheader1').innerHTML   =  map.get(decodeURIComponent(params["subject"])); // '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["subject"]) + '" allowTaint="true" >';
+      document.querySelector('#mydivheader2').innerHTML   =  map.get(decodeURIComponent(params["location"])); //  '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["location"]) + '" allowTaint="true" >';
+      document.querySelector('#mydivheader3').innerHTML =  (params["start"]);
+	  document.querySelector('#mydivheader4').innerHTML   =  map.get(decodeURIComponent(params["day"])); // '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["day"]) + '" allowTaint="true" >';
+      document.querySelector('#mydivheader5').innerHTML =  (params["time"]);
+      document.querySelector('#mydivheader6').innerHTML =  (params["contact1"]);
+      document.querySelector('#mydivheader7').innerHTML =  (params["contact2"]);
+        
+        
+        //online image handling
+        //
+        if (decodeURIComponent(params["location"]) == "online") {
+            document.getElementById("ad_image").src = "male_online.png";
+            document.getElementById("gender_both").value = "male_online.png";
+            document.getElementById("gender_female").value = "female_online.png";
+
+        }
+      //Make the DIV element draggagle:
+      dragElement(document.getElementById("mydiv"));
+      dragElement(document.getElementById("mydiv1"));
+      dragElement(document.getElementById("mydiv2"));
+      dragElement(document.getElementById("mydiv3"));
+      dragElement(document.getElementById("mydiv4"));
+      dragElement(document.getElementById("mydiv5"));
+      dragElement(document.getElementById("mydiv6"));
+      dragElement(document.getElementById("mydiv7"));
+	  var global_current_elmnt;
+      function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+        function dragMouseDown(e) {
+          e = e || window.event;
+		  	  global_current_elmnt = e;
+
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+	  
+    </script>
+
+  </body>
+<script>
+let zoom_map = new Map();
+
+	      var zoom = 1;
+    var zoomStep = 0.05;
+
+    document.getElementById("zoomIn").addEventListener("click", function() {
+	if (!(zoom_map.has(global_current_elmnt.srcElement.id))) {
+	zoom_map.set(global_current_elmnt.srcElement.id, 1);   // a string key
+}
+	zoom_map.set(global_current_elmnt.srcElement.id, zoom_map.get(global_current_elmnt.srcElement.id) + zoomStep);
+//      zoom += zoomStep;
+      global_current_elmnt.srcElement.style.transform = "scale(" + zoom_map.get(global_current_elmnt.srcElement.id) + ")";
+    });
+    document.getElementById("zoomOut").addEventListener("click", function() {
+	if (!(zoom_map.has(global_current_elmnt.srcElement.id))) {
+	zoom_map.set(global_current_elmnt.srcElement.id, 1);   // a string key
+}
+      if (zoom_map.get(global_current_elmnt.srcElement.id) > zoomStep) {
+        zoom_map.set(global_current_elmnt.srcElement.id, zoom_map.get(global_current_elmnt.srcElement.id) - zoomStep);
+        global_current_elmnt.srcElement.style.transform = "scale(" + zoom_map.get(global_current_elmnt.srcElement.id) + ")";
+      }
+    });
+	
+	    document.getElementById("new_ad").addEventListener("click", function() {
+		location.href = "ad_index.html";
+    });
+	var img_dir = "./";
+	function handleZoomClick(e) {
+        if (decodeURIComponent(params["location"]) == "online") {
+            document.getElementById("gender_both").value = "male_online.png";
+            document.getElementById("gender_female").value = "female_online.png";
+            return;
+        }
+		img_dir = e.value;
+        var image = document.getElementById("gender_both").value;
+        //gender_both
+        //gender_female
+        if (document.getElementById("gender_both").checked) {
+            image = document.getElementById("gender_both").value;
+        } else {
+            image = document.getElementById("gender_female").value;
+        }
+        document.getElementById("ad_image").src = img_dir + image;
+	}
+	function handleClick(e) {
+		document.getElementById("ad_image").src = img_dir + e.value;
+	}
+	</script>
+
+</html>
