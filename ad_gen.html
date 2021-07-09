@@ -79,24 +79,6 @@ font-family: "STV", Times, serif;
       cursor: move;
     }
 	
-		   /* mydivheader1 subject -->*/
-    #mydiv1 {
-             letter-spacing: 0;
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.0);
-      font-size: 150%;
-font-family: "STV", Times, serif;
-      text-align: center;
-      border: 0px solid #d3d3d3;
-      color: #740000;
-      top: 28%;
-      right:0%;
-direction: rtl;
-
-    }
-    #mydivheader1 {
-      cursor: move;
-    }
 		   /* mydivheader2 location -->*/
     #mydiv2 {
       letter-spacing: 0;
@@ -214,26 +196,6 @@ font-family: "STV", Times, serif;
       size="18"
       color: #000000;
     }
-		  /* mydivheader7 contact2 */
-	    #mydiv7 {
-	 letter-spacing: 0;
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.0);
-      font-size: 130%;
-font-family: "STV", Times, serif;
-      text-align: center;
-      border: 0px solid #d3d3d3;
-      color: #740000;
-      top: 90%;
-      right:0%;
-    }
-    #mydivheader7 {
-
-      cursor: move;
-      margin: 0%;
-      size="18"
-      color: #000000;
-    }
 	
 	
     * {
@@ -259,13 +221,6 @@ font-family: "STV", Times, serif;
               <div contentEditable="true" id="mydivheader"></div>
             </div>
           </td> 
-        </tr>
-        <tr>          
-          <td>
-            <div id="mydiv1">
-              <div contentEditable="true" id="mydivheader1"></div>
-            </div>
-          </td>
         </tr>
         <tr> 
           <td>
@@ -301,11 +256,6 @@ font-family: "STV", Times, serif;
               <div contentEditable="true" id="mydivheader6"></div>
             </div>
           </td>
-		  <td>
-            <div id="mydiv7">
-              <div contentEditable="true" id="mydivheader7"></div>
-            </div>
-          </td>
         </tr>
         <tr cellspacing="0">
 <td id="user_buttons" data-html2canvas-ignore="true">
@@ -315,8 +265,8 @@ font-family: "STV", Times, serif;
   <input onclick="handleZoomClick(this);" type="radio" name="zoom" value="./" checked> وجاهي<br>
   <input onclick="handleZoomClick(this);" type="radio" name="zoom" value="zoom/"> عبر الزووم<br>
   <p>اختر نوع الاعلان</p>
-  <input id="gender_both" onclick="handleClick(this);" type="radio" name="gender" value="scale_new_poster_empty.png" checked> اخوة واخوات<br>
-  <input id="gender_female" onclick="handleClick(this);" type="radio" name="gender" value="scale_course_ad_empty_female.png"> اخوات فقط<br>
+  <input id="gender_both" onclick="handleClick(this);" type="radio" name="gender" value="scale_new_poster_empty.jpg" checked> اخوة <br>
+  <input id="gender_female" onclick="handleClick(this);" type="radio" name="gender" value="scale_course_ad_empty_female.png"> اخوات <br>
 </div>
 <br>    
 
@@ -334,7 +284,7 @@ font-family: "STV", Times, serif;
 </td>
           <td>
             <div class="imgbox">
-              <img id ="ad_image" style="z-index: -100;" class="center-fit" align="right" src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/scale_new_poster_empty.png" allowTaint="true" >
+              <img id ="ad_image" style="z-index: -100;" class="center-fit" align="right" src="https://raw.githubusercontent.com/tajweed48/tajweed48.github.io/master/scale_new_poster_empty.jpg" allowTaint="true" >
             </div>
           </td>
         </tr>
@@ -483,65 +433,13 @@ element.appendChild(new_ad);
       }
 	  let map = new Map();
 
-map.set("shiekh_khaled_sakr"				, 'الشيخ خالد صقر');   // a string key
-map.set("shiekh_abd_alrahem", 'الشيخ عبد الرحيم خليل'); // a string key
-map.set("shiekh_mashhor_fawaz", 'الشيخ مشهور فوّاز'); // a string key
-map.set("shiekh_mahmod_abo_shfea"		, 'الشيخ محمود ابو شفيع');   // a string key
-map.set("shiekh_muhammad_ayesh"		, 'الشيخ محمد عايش');   // a string key
-map.set("shiekh_ameer_naffar"				, 'الشيخ امير نفار');   // a string key
-map.set("shiekh_ehab_khalil"					, 'الشيخ ايهاب الشيخ خليل');   // a string key
-map.set("shiekh_ehab_khiralla"				, 'الشيخ ايهاب خير الله');   // a string key
-map.set("shiekh_muhammad_haidare"		, 'الشيخ محمد حيادري');   // a string key
-map.set("shiekh_raafat_kanaana"		, 'الشيخ رأفت كناعنة');   // a string key
-map.set("shiekh_badeaa_melhem"		, 'الشيخ بديع ملحم');   // a string key
-map.set("shiekh_mahmod_khatib"			, 'الشيخ محمود خطيب');   // a string key
-map.set("shiekh_hilal"							, 'الشيخ هلال حسينية');   // a string key
-map.set("shiekh_muhamad_aref"			, 'الشيخ محمد وتد');   // a string key
-map.set("shiekh_mahmod_watad"			, 'الشيخ محمود وتد');   // a string key
-map.set("shiekh_khaled_zoabi"				, 'الشيخ خالد زعبي');   // a string key
-map.set("shiekh_abdallah_idres"				, 'الشيخ عبد الله إدريس');   // a string key
-map.set("hamed"									, 'الأستاذ حامد اغبارية');   // a string key
-map.set("shiekh_tawfek"						, 'الأستاذ توفيق محمد');   // a string key
-map.set("shiekh_ahmad_hammad"			, 'الشيخ احمد حماد');   // a string key
-map.set("hussen_muhammady"			, 'الشيخ حسين محمدي');   // a string key
-map.set("abd_alrahman_abu_hija"			, 'الشيخ عبد الرحمن ابو الهيجاء');   // a string key
-map.set("okht_nihal_okare"					, 'الأخت نهال عكري');   // a string key
-map.set("okht_sawsan_masarwe"					, 'الأخت سوسن مصاروة');   // a string key
-map.set("okht_eiman_abed"					, 'الأخت ايمان عبيد');   // a string key
-map.set("okht_asmaa_kryeem"				, 'الأخت اسماء كريم');   // a string key
-map.set("okht_tasnem_taha"				, 'الأخت تسنيم طه');   // a string key
-map.set("okht_layla_mawase", 'الأخت ليلى مواسي'); // a string key
+        map.set("shiekh_1", 'الشيخ محمد محمد'); // a string key
+        map.set("shiekh_2", 'الشيخ محمود محمود'); // a string key
+        map.set("shiekh_3", 'الشيخ احمد احمد'); // a string key
 
-map.set("tfser", 'تفسير'); // a string key
-map.set("sera", 'السيرة النبوية'); // a string key
-map.set("abadat", 'عبادات (1)'); // a string key
-map.set("abadat2", 'عبادات (2)'); // a string key
-map.set("tajwed", 'تجويد (1)'); // a string key
-map.set("tajwed2", 'تجويد (2)'); // a string key
-map.set("trbyat_awlad", 'تربية الأولاد في الإسلام'); // a string key
-map.set("olom_hadeth", 'علوم قرآن وعلوم حديث'); // a string key
-map.set("osol20", 'الأصول العشرين'); // a string key
-map.set("thkafa_islamya", 'ثقافة إسلامية'); // a string key
-map.set("arabic_lang", 'لغة عربية'); // a string key
-map.set("tzkya", 'تزكية'); // a string key
-map.set("rjal_alfekr", 'رجال الفكر والدعوة'); // a string key
-map.set("gzw_fkre", 'الغزو الفكري'); // a string key
-map.set("mjtmaa_arabe", 'المجتمع العربي'); // a string key
-map.set("osol_feqh", 'أصول فقه'); // a string key
-map.set("wsael_daawa", 'وسائل دعوة'); // a string key
-map.set("aqeda1", 'عقيدة'); // a string key
-map.set("asaleb_daawa", 'أساليب دعوة'); // a string key
-map.set("thula_mn_awlen", 'ثلّة من الأولين'); // a string key
-
-map.set("kofr_kna"	, 'كفركنا - قاعة مسجد عثمان بن عفان');   // a string key
-map.set("qlnsawa"	, 'قلنسوة - المدرسة الاهلية');   // a string key
-map.set("arraba"		, 'عرابة - مركز النور');   // a string key
-map.set("fredes"		, 'الفرديس - قاعة مسجد الفردوس - الظهرات');   // a string key
-map.set("tamra"		, 'طمرة - مسجد معاذ بن جبل');   // a string key
-map.set("kofr_kara"	, 'كفرقرع - قاعة مسجد ابو بكر');   // a string key
-map.set("um_alfahm"	, 'مسجد ابن تيميه ام الفحم');   // a string key
-map.set("nahaf"	, 'نحف - مسجد الرحمن');   // a string key
-map.set("online"	, '');   // a string key
+        map.set("north", 'الشمال - كفركنا'); // a string key
+        map.set("triangle", 'المثلث - أم الفحم'); // a string key
+        map.set("south", 'الجنوب - قلنسوة'); // a string key
 
 map.set('sun', 'أحد');   // a string key
 map.set('mon', 'إثنين');   // a string key
@@ -554,13 +452,11 @@ map.set('sat', 'سبت');   // a string key
 
       params = getParams();
       document.querySelector('#mydivheader').innerHTML   =  map.get(decodeURIComponent(params["teacher"])); // '<img   src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["teacher"]) + '" allowTaint="true" >';
-      document.querySelector('#mydivheader1').innerHTML   =  map.get(decodeURIComponent(params["subject"])); // '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["subject"]) + '" allowTaint="true" >';
       document.querySelector('#mydivheader2').innerHTML   =  map.get(decodeURIComponent(params["location"])); //  '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["location"]) + '" allowTaint="true" >';
       document.querySelector('#mydivheader3').innerHTML =  (params["start"]);
 	  document.querySelector('#mydivheader4').innerHTML   =  map.get(decodeURIComponent(params["day"])); // '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["day"]) + '" allowTaint="true" >';
       document.querySelector('#mydivheader5').innerHTML =  (params["time"]);
       document.querySelector('#mydivheader6').innerHTML =  (params["contact1"]);
-      document.querySelector('#mydivheader7').innerHTML =  (params["contact2"]);
         
         
         //online image handling
@@ -573,13 +469,11 @@ map.set('sat', 'سبت');   // a string key
         }
       //Make the DIV element draggagle:
       dragElement(document.getElementById("mydiv"));
-      dragElement(document.getElementById("mydiv1"));
       dragElement(document.getElementById("mydiv2"));
       dragElement(document.getElementById("mydiv3"));
       dragElement(document.getElementById("mydiv4"));
       dragElement(document.getElementById("mydiv5"));
       dragElement(document.getElementById("mydiv6"));
-      dragElement(document.getElementById("mydiv7"));
 	  var global_current_elmnt;
       function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

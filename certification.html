@@ -133,26 +133,7 @@ table.blueTable tfoot .links a{
     #mydivheader {
         cursor: move;
     }
-    /* mydivheader1 subject -->*/
-    
-    #mydiv1 {
-        letter-spacing: 0;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.0);
-        font-size: 150%;
-        font-family: "STV", Times, serif;
-        text-align: center;
-        border: 0px solid #d3d3d3;
-        color: #873a35;
-        top: 45%;
-        right: 0%;
-        direction: rtl;
 
-    }
-    
-    #mydivheader1 {
-        cursor: move;
-    }
     /* mydivheader2 location -->*/
     
     #mydiv2 {
@@ -249,13 +230,6 @@ table.blueTable tfoot .links a{
             </tr>
             <tr>
                 <td>
-                    <div id="mydiv1">
-                        <div contentEditable="true" id="mydivheader1"></div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <div id="mydiv2">
                         <div contentEditable="true" id="mydivheader2"></div>
                     </div>
@@ -278,7 +252,7 @@ table.blueTable tfoot .links a{
             <tr cellspacing="0">
                 <td>
                     <div class="imgbox">
-                        <img id="cert_image" style="z-index: -100;" class="center-fit" align="right" src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/certs/course_certification_male.jpg" allowTaint="true">
+                        <img id="cert_image" style="z-index: -100;" class="center-fit" align="right" src="https://raw.githubusercontent.com/tajweed48/tajweed48.github.io/master/certs/course_certification_male.jpg" allowTaint="true">
                     </div>
                 </td>
 
@@ -389,7 +363,7 @@ table.blueTable tfoot .links a{
                 } else if (students_list_counter < (students_array.length - 1)) {
                     students_list_counter++;
                     students_counter = 0;
-                    document.getElementById("cert_image").src = "https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/certs/" + cert_list[students_list_counter];
+                    document.getElementById("cert_image").src = "https://raw.githubusercontent.com/tajweed48/tajweed48.github.io/master/certs/" + cert_list[students_list_counter];
                 } else {
 				    alert("تم إنشاء جميع الشهادات");
 				}
@@ -435,72 +409,21 @@ element.appendChild(para);
         }
         let map = new Map();
 
-        map.set("shiekh_khaled_sakr", 'الشيخ خالد صقر'); // a string key
-        map.set("shiekh_abd_alrahem", 'الشيخ عبد الرحيم خليل'); // a string key
-        map.set("shiekh_mashhor_fawaz", 'الشيخ مشهور فوّاز'); // a string key
-        map.set("shiekh_mahmod_abo_shfea", 'الشيخ محمود ابو شفيع'); // a string key
-        map.set("shiekh_muhammad_ayesh", 'الشيخ محمد عايش'); // a string key
-        map.set("shiekh_ameer_naffar", 'الشيخ امير نفار'); // a string key
-        map.set("shiekh_ehab_khalil", 'الشيخ ايهاب الشيخ خليل'); // a string key
-        map.set("shiekh_ehab_khiralla", 'الشيخ ايهاب خير الله'); // a string key
-        map.set("shiekh_muhammad_haidare", 'الشيخ محمد حيادري'); // a string key
-        map.set("shiekh_raafat_kanaana"		, 'الشيخ رأفت كناعنة');   // a string key
-        map.set("shiekh_badeaa_melhem"		, 'الشيخ بديع ملحم');   // a string key
-        map.set("shiekh_mahmod_khatib", 'الشيخ محمود خطيب'); // a string key
-        map.set("shiekh_hilal", 'الشيخ هلال حسينية'); // a string key
-        map.set("shiekh_muhamad_aref", 'الشيخ محمد العارف وتد'); // a string key
-        map.set("shiekh_mahmod_watad", 'الشيخ محمود وتد'); // a string key
-        map.set("shiekh_khaled_zoabi", 'الشيخ خالد زعبي'); // a string key
-        map.set("hamed", 'الأستاذ حامد اغبارية'); // a string key
-        map.set("shiekh_tawfek", 'الأستاذ توفيق محمد'); // a string key
-        map.set("shiekh_ahmad_hammad", 'الشيخ احمد حماد'); // a string key
-        map.set("hussen_muhammady"			, 'الشيخ حسين محمدي');   // a string key
-        map.set("abd_alrahman_abu_hija"			, 'الشيخ عبد الرحمن ابو الهيجاء');   // a string key
-        map.set("okht_nihal_okare", 'الأخت نهال عكري'); // a string key
-        map.set("okht_sawsan_masarwe"					, 'الأخت سوسن مصاروة');   // a string key
-        map.set("okht_eiman_abed", 'الأخت ايمان عبيد'); // a string key
-        map.set("okht_asmaa_kryeem", 'الأخت اسماء كريم'); // a string key
-        map.set("okht_tasnem_taha", 'الأخت تسنيم طه'); // a string key
-        map.set("okht_layla_mawase", 'الأخت ليلى مواسي'); // a string key
+        map.set("shiekh_1", 'الشيخ محمد محمد'); // a string key
+        map.set("shiekh_2", 'الشيخ محمود محمود'); // a string key
+        map.set("shiekh_3", 'الشيخ احمد احمد'); // a string key
 
-        map.set("tfser", 'تفسير'); // a string key
-        map.set("sera", 'السيرة النبوية'); // a string key
-        map.set("abadat", 'عبادات (1)'); // a string key
-        map.set("abadat2", 'عبادات (2)'); // a string key
-        map.set("tajwed", 'تجويد (1)'); // a string key
-        map.set("tajwed2", 'تجويد (2)'); // a string key
-        map.set("trbyat_awlad", 'تربية الأولاد في الإسلام'); // a string key
-        map.set("olom_hadeth", 'علوم قرآن وعلوم حديث'); // a string key
-        map.set("osol20", 'الأصول العشرين'); // a string key
-        map.set("thkafa_islamya", 'ثقافة إسلامية'); // a string key
-        map.set("arabic_lang", 'لغة عربية'); // a string key
-        map.set("tzkya", 'تزكية'); // a string key
-        map.set("rjal_alfekr", 'رجال الفكر والدعوة'); // a string key
-        map.set("gzw_fkre", 'الغزو الفكري'); // a string key
-        map.set("mjtmaa_arabe", 'المجتمع العربي'); // a string key
-        map.set("osol_feqh", 'أصول فقه'); // a string key
-        map.set("wsael_daawa", 'وسائل دعوة'); // a string key
-        map.set("aqeda1", 'عقيدة'); // a string key
-        map.set("asaleb_daawa", 'أساليب دعوة'); // a string key
-        map.set("thula_mn_awlen", 'ثلّة من الأولين'); // a string key
-
-        map.set("kofr_kna", 'كفركنا - قاعة مسجد عثمان بن عفان'); // a string key
-        map.set("qlnsawa", 'قلنسوة - المدرسة الاهلية'); // a string key
-        map.set("arraba", 'عرابة - مركز النور'); // a string key
-        map.set("fredes", 'الفرديس - قاعة مسجد الفردوس - الظهرات'); // a string key
-        map.set("tamra", 'طمرة - مسجد معاذ بن جبل'); // a string key
-        map.set("kofr_kara", 'كفرقرع - قاعة مسجد ابو بكر'); // a string key
-        map.set("um_alfahm", 'مسجد ابن تيميه ام الفحم'); // a string key
+        map.set("north", 'الشمال - كفركنا'); // a string key
+        map.set("triangle", 'المثلث - أم الفحم'); // a string key
+        map.set("south", 'الجنوب - قلنسوة'); // a string key
 
         params = getParams();
         document.querySelector('#mydivheader').innerHTML = map.get(decodeURIComponent(params["teacher"])); // '<img   src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["teacher"]) + '" allowTaint="true" >';
-        document.querySelector('#mydivheader1').innerHTML = map.get(decodeURIComponent(params["subject"])); // '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["subject"]) + '" allowTaint="true" >';
         document.querySelector('#mydivheader2').innerHTML = map.get(decodeURIComponent(params["location"])); //  '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["location"]) + '" allowTaint="true" >';
         document.querySelector('#mydivheader3').innerHTML = (params["start"]);
 
         //Make the DIV element draggagle:
         dragElement(document.getElementById("mydiv"));
-        dragElement(document.getElementById("mydiv1"));
         dragElement(document.getElementById("mydiv2"));
         dragElement(document.getElementById("mydiv3"));
         dragElement(document.getElementById("mydiv4"));
@@ -644,7 +567,7 @@ element.appendChild(para);
 			    students_list_counter = 0;
 			    students_counter = 0;
 				document.querySelector('#mydivheader4').innerHTML = students_array[0][0];
-                document.getElementById("cert_image").src = "https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/certs/" + cert_list[0];
+                document.getElementById("cert_image").src = "https://raw.githubusercontent.com/tajweed48/tajweed48.github.io/master/certs/" + cert_list[0];
 				document.getElementById("create_button").onclick = create_image;
 			}
         }
