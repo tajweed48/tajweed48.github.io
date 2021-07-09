@@ -125,7 +125,7 @@ table.blueTable tfoot .links a{
         font-family: "STV", Times, serif;
         text-align: center;
         border: 0px solid #d3d3d3;
-        color: #873a35;
+        color: #0000FF;
         top: 63%;
         right: 0%;
     }
@@ -145,8 +145,8 @@ table.blueTable tfoot .links a{
         font-family: "STV", Times, serif;
         text-align: center;
         border: 0px solid #d3d3d3;
-        color: #873a35;
-        top: 52%;
+        color: #0000FF;
+        top: 63%;
         right: 0%;
     }
     
@@ -164,7 +164,7 @@ table.blueTable tfoot .links a{
         direction: rtl;
         border: 0px solid #d3d3d3;
         font-family: "STV", Times, serif;
-        color: #873a35;
+        color: #0000FF;
         top: 60%;
         right: 0%;
     }
@@ -184,7 +184,7 @@ table.blueTable tfoot .links a{
         font-family: "STV", Times, serif;
         text-align: center;
         border: 0px solid #b34103;
-        color: #873a35;
+        color: #0000FF;
         top: 35%;
         right: 0%;
     }
@@ -193,6 +193,73 @@ table.blueTable tfoot .links a{
         cursor: move;
         size="18" color: rgba(00, 50, 69, 0.1);
     }
+
+    /* mydivheader5 birth month -->*/
+    
+    #mydiv5 {
+        direction: rtl;
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #b34103;
+        color: #0000FF;
+        top: 40%;
+        right: 0%;
+    }
+    
+    #mydivheader5 {
+        cursor: move;
+        size="18" color: rgba(00, 50, 69, 0.1);
+    }
+
+
+    /* mydivheader6 birth year -->*/
+    
+    #mydiv6 {
+        direction: rtl;
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #b34103;
+        color: #0000FF;
+        top: 45%;
+        right: 0%;
+    }
+    
+    #mydivheader6 {
+        cursor: move;
+        size="18" color: rgba(00, 50, 69, 0.1);
+    }
+
+
+    /* mydivheader7 grade -->*/
+    
+    #mydiv7 {
+        direction: rtl;
+        letter-spacing: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.0);
+        font-size: 150%;
+        font-family: "STV", Times, serif;
+        text-align: center;
+        border: 0px solid #b34103;
+        color: #0000FF;
+        top: 50%;
+        right: 0%;
+    }
+    
+    #mydivheader7 {
+        cursor: move;
+        size="18" color: rgba(00, 50, 69, 0.1);
+    }
+
+
     
     * {
         margin: 0;
@@ -249,6 +316,27 @@ table.blueTable tfoot .links a{
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <div id="mydiv5">
+                        <div contentEditable="true" id="mydivheader5"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mydiv6">
+                        <div contentEditable="true" id="mydivheader6"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="mydiv7">
+                        <div contentEditable="true" id="mydivheader7"></div>
+                    </div>
+                </td>
+            </tr>
             <tr cellspacing="0">
                 <td>
                     <div class="imgbox">
@@ -264,27 +352,15 @@ table.blueTable tfoot .links a{
 <br>
 	<table data-html2canvas-ignore="true" class="blueTable" cellspacing="70">
         <thead class="spaceUnder">
-			<th>أدخل اسماء الطلاب بدون أوراد</th>
-			<th>أدخل اسماء الطالبات بدون أوراد</th>
+			<th>أدخل اسماء الطلاب </th>
+			<th>أدخل اسماء الطالبات </th>
 	    </thead>
         <tr class="spaceUnder">
 			<td>
-				<textarea id="students_list_male" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطلاب بدون أوراد"></textarea>
+				<textarea id="students_list_male" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطلاب "></textarea>
 			</td>
 			<td>
-				<textarea id="students_list_female" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطالبات بدون أوراد"></textarea>
-			</td>
-	    </tr>
-        <thead class="spaceUnder">
-			<th>أدخل اسماء الطلاب المحافظين على الاوراد</th>
-			<th>أدخل اسماء الطالبات المحافظات على الاوراد</th>
-	    </thead>
-        <tr class="spaceUnder">
-			<td>
-				<textarea id="students_list_male_extra" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطلاب المحافظين على الاوراد"></textarea>
-			</td>
-			<td>
-				<textarea id="students_list_female_extra" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطالبات المحافظات على الاوراد"></textarea>
+				<textarea id="students_list_female" rows="5" cols="50" data-html2canvas-ignore="true" placeholder="أدخل اسماء الطالبات "></textarea>
 			</td>
 	    </tr>
       </table>
@@ -367,8 +443,7 @@ table.blueTable tfoot .links a{
                 } else {
 				    alert("تم إنشاء جميع الشهادات");
 				}
-
-                document.querySelector('#mydivheader4').innerHTML = students_array[students_list_counter][students_counter];
+                var curr_fields = parse_student(students_array[students_list_counter][students_counter]);
 
                 /*
 	var elementzoomOut = document.getElementById("zoomOut");
@@ -418,7 +493,7 @@ element.appendChild(para);
         map.set("south", 'الجنوب - قلنسوة'); // a string key
 
         params = getParams();
-        document.querySelector('#mydivheader').innerHTML = map.get(decodeURIComponent(params["teacher"])); // '<img   src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["teacher"]) + '" allowTaint="true" >';
+        //document.querySelector('#mydivheader').innerHTML = map.get(decodeURIComponent(params["teacher"])); // '<img   src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["teacher"]) + '" allowTaint="true" >';
         document.querySelector('#mydivheader2').innerHTML = map.get(decodeURIComponent(params["location"])); //  '<img  src="https://raw.githubusercontent.com/IDSELAADMCODE/IDSELAADMCODE.github.io/master/field_pics/' + decodeURIComponent(params["location"]) + '" allowTaint="true" >';
         document.querySelector('#mydivheader3').innerHTML = (params["start"]);
 
@@ -427,6 +502,9 @@ element.appendChild(para);
         dragElement(document.getElementById("mydiv2"));
         dragElement(document.getElementById("mydiv3"));
         dragElement(document.getElementById("mydiv4"));
+        dragElement(document.getElementById("mydiv5"));
+        dragElement(document.getElementById("mydiv6"));
+        dragElement(document.getElementById("mydiv7"));
         var global_current_elmnt;
 
         function dragElement(elmnt) {
@@ -474,6 +552,18 @@ element.appendChild(para);
                 document.onmousemove = null;
             }
         }
+        
+		function parse_student(student_str){
+        
+            var fields = student_str.split('-');
+            document.querySelector('#mydivheader4').innerHTML = fields[0];
+            document.querySelector('#mydivheader5').innerHTML = fields[1];
+            document.querySelector('#mydivheader6').innerHTML = fields[2];
+            document.querySelector('#mydivheader7').innerHTML = fields[3];
+
+			return fields;
+		}
+
     </script>
 
 </body>
@@ -539,34 +629,17 @@ element.appendChild(para);
 				students_counter++;
 			}
 
-            students = document.getElementById("students_list_male_extra").value;
-			if (isEmptyOrSpaces(students)) {
-				students_list_counter++;
-			} else {
-				cert_list[students_counter] = "course_certification_extra_male.jpg";
-				tmp_array = students.split("\n");
-				students_array[students_counter] = tmp_array.filter(isNotEmptyOrSpaces);
-				students_counter++;
-			}
 
-            students = document.getElementById("students_list_female_extra").value;
-			if (isEmptyOrSpaces(students)) {
-				students_list_counter++;
-			} else {
-				cert_list[students_counter] = "course_certification_extra_female.jpg";
-				tmp_array = students.split("\n");
-				students_array[students_counter] = tmp_array.filter(isNotEmptyOrSpaces);
-				students_counter++;
-			}
 
-			if (students_list_counter >= 4) {
+			if (students_list_counter >= 2) {
 			    students_list_counter = 0;
 			    students_counter = 0;
 				alert("الرجاء تعبئة اسماء الطلاب اولا");
 			} else {
 			    students_list_counter = 0;
 			    students_counter = 0;
-				document.querySelector('#mydivheader4').innerHTML = students_array[0][0];
+                var curr_fields = parse_student(students_array[0][0]);
+
                 document.getElementById("cert_image").src = "https://raw.githubusercontent.com/tajweed48/tajweed48.github.io/master/certs/" + cert_list[0];
 				document.getElementById("create_button").onclick = create_image;
 			}
